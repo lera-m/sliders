@@ -18,6 +18,7 @@ body {
     white-space: nowrap;
     height: 100%;
     position: relative;
+    font-size: 0;
 }
 .slider .slider-img {
     width: 100%;
