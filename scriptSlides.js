@@ -1,3 +1,60 @@
+/*
+var allGalleries = document.querySelectorAll(".slider");
+
+var firstGallery = allGalleries[0].querySelector(".slider-inner").getElementsByClassName("img");
+var secondGallery = allGalleries[1].querySelector(".slider-inner").getElementsByClassName("img");
+//secondGallery[1].className = secondGallery[1].className + " visible"
+
+console.log(secondGallery[1]);
+*/
+
+function createSlider(div){
+    var sliderInner = div.querySelector(".slider-inner");
+    
+    var images = sliderInner.querySelectorAll(".img");
+    
+    var arrowLeft = div.querySelector('.left');
+
+    var arrowRight = div.querySelector('.right');
+    
+    console.log(arrowLeft);
+    
+    function rightClick(event){
+        event.preventDefault();
+        
+    }    
+    
+    function leftClick(event){
+        event.preventDefault();
+        
+        alert("left");
+    }    
+    
+    arrowLeft.addEventListener("click", leftClick);
+    arrowRight.addEventListener("click", rightClick);
+
+}
+
+var allDivs = document.body.querySelectorAll(".slider");
+
+var a = allDivs[0];
+var b = allDivs[1];
+
+createSlider(a)
+//createSlider(b)
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 var gallery = [
            "img/1.jpg", 
            "img/2.jpg", 
@@ -37,42 +94,5 @@ var arrowRight = function(elem){
         img.src = gallery[temp];
     }
 };
-
-
-/*
-var arrowLeft = document.querySelector('.left');
-
-var arrowRight = document.querySelector('.right');
-
-arrowRight.onclick = function(e) {
-    
-    e.preventDefault();
-    if (temp < gallery.length - 1) {
-        pic = gallery[temp + 1];
-        document.getElementById("img").src = pic;
-        temp++;
-    } else if (temp === gallery.length - 1){
-        temp = 0;
-        pic = gallery[temp];
-        document.getElementById("img").src = pic;
-    }
-};
-
-
-
-
-
-arrowLeft.onclick = function(e) {
-    
-    e.preventDefault();
-    if (temp > 0) {
-        pic = gallery[temp - 1];
-        document.getElementById("img").src = pic;
-        temp--;
-    } else if (temp === 0){
-        temp = gallery.length - 1;
-        pic = gallery[img.length - 1];
-        document.getElementById("img").src = pic;
-    }
-};
 */
+

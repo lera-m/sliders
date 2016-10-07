@@ -14,12 +14,11 @@ body {
     box-shadow: 10px 10px 5px grey;
     background-color: black;
 }
-.slider-inner1,
-.slider-inner2 {
+.slider .slider-inner {
     white-space: nowrap;
 }
 
-.arrow {
+.slider .arrow {
     position: absolute;
     top: calc(50% - 25px);
     width: 50px;
@@ -31,15 +30,17 @@ body {
     color: #fff;
     text-align: center;
 }
-.arrow:hover {
+.slider .arrow:hover {
     background: #e5e5e5;
     color: #000; 
 }
 
-.left {
+.slider .left {
     left: 0;
 }
 
-.right {
+.slider .right {
     right: 0;
 }
+
+
