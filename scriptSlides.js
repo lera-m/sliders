@@ -13,26 +13,35 @@ function createSlider(div){
     
     var images = sliderInner.querySelectorAll(".img");
     
+    var currentImg = 0;
+    
     var arrowLeft = div.querySelector('.left');
 
     var arrowRight = div.querySelector('.right');
     
     console.log(arrowLeft);
     
+    function moveLeft() {
+        sliderInner.style.left = (currentImg * -600) + "px"; 
+    }
+    
     function rightClick(event){
         event.preventDefault();
-        
+        currentImg++;  
+        moveLeft(); 
     }    
     
     function leftClick(event){
         event.preventDefault();
-        
-        alert("left");
+        currentImg--;  
+        moveLeft();
+
     }    
     
     arrowLeft.addEventListener("click", leftClick);
     arrowRight.addEventListener("click", rightClick);
-
+    //set initial left
+    moveLeft();
 }
 
 var allDivs = document.body.querySelectorAll(".slider");
@@ -41,7 +50,7 @@ var a = allDivs[0];
 var b = allDivs[1];
 
 createSlider(a)
-//createSlider(b)
+createSlider(b)
 
 
 
