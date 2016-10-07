@@ -19,6 +19,7 @@ body {
     height: 100%;
     position: relative;
     font-size: 0;
+    transition: left 1s linear;
 }
 .slider .slider-img {
     width: 100%;
